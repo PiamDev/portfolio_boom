@@ -17,7 +17,7 @@ body{
     background: #F6F6F6;
 }
 
-nav{
+nav {
     position: sticky;
     height: 50px;
     display: flex;
@@ -29,7 +29,7 @@ nav{
     top:0;
 }
 
-nav a{
+nav a {
     padding: 0 24px;
     text-decoration: none;
     color: black;
@@ -56,6 +56,7 @@ padding:50px;
 
 #intro img {
     max-height: 600px;
+    height: auto;
     border-radius: 30px;
 }
 
@@ -71,10 +72,10 @@ padding:50px;
 #intro a{
     padding: 1rem 2rem;
     background-color: #99A1E9;
-border-radius:100px;
-text-decoration:none;
-font:22px bold;
-color: white;
+    border-radius:100px;
+    text-decoration:none;
+    font:22px bold;
+    color: white;
 }
 
 .header-1{
@@ -89,14 +90,15 @@ color: white;
     padding: 40px;
     background-color: white;
     border-radius: 20px;
+    width: 100%;
 }
 
-    .con-1:not(:first-child){
+.con-1:not(:first-child){
     margin-top:32px;
 }
 
 .con-1 h2{
-    margin-top:32px;
+    margin-bottom:32px;
 }
 
 h2{
@@ -117,8 +119,7 @@ h2{
     border-radius: 35px;
 }
 
-.con-2 h2{
-    margin-top: 50px;
+.con-2 h2 {
     margin-bottom: 32px;
 }
 
@@ -155,7 +156,7 @@ h2{
     border-radius: 200px;
 }
 
-.con1,p,.con-2p{
+.con1,p,.con-2 p {
     font: 18px;
 }
 
@@ -164,9 +165,6 @@ h2{
 }
 
 @media (max-width: 1320px) {
-    body {
-        width: 100vw;
-    }
     .container {
         padding: 0 50px;
         display: flex;
@@ -177,7 +175,6 @@ h2{
 
     #intro {
         flex-direction: column;
-        
     }
 
     #intro div {
@@ -185,14 +182,45 @@ h2{
         margin-left: 0;
     }
 
-    .margin-1 {
+    img.margin-1 {
         width: 100%;
     }
 
-    .box div {
+    .box > div {
         flex-direction: column;
+        width: 100%;
     }
 
+    .container .box {
+        width: 100%;
+    }
+
+    .con-3 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-1, #intro h1 {
+        font-size: 32px;
+    }
+
+    h2, #intro p {
+        font-size: 24px;
+    }
+
+    #intro a {
+        font-size: 18px;
+    }
+}
 
 
+@media (max-width: 768px) {
+    nav a {
+        font-size: 12px;
+        padding: 0 0.5rem;
+    }
+
+    #intro img {
+        width: 300px;
+    }
 }
